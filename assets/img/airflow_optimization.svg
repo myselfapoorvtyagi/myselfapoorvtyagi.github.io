@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8fafc" rx="20"/>
+
+  <!-- Title -->
+  <text x="700" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    Airflow Composer Optimization — End-to-End Workflow Flow
+  </text>
+
+  <!-- STEP 1: Webhook Trigger -->
+  <rect x="100" y="140" width="220" height="100" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="210" y="175" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Webhook Trigger</text>
+  <text x="210" y="200" text-anchor="middle" font-size="14" fill="#0369a1">Receives event / ID</text>
+
+  <!-- STEP 2: Cloud Function -->
+  <line x1="320" y1="190" x2="380" y2="190" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="380" y="120" width="260" height="140" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="510" y="160" text-anchor="middle" font-size="16" font-weight="600" fill="#854d0e">Cloud Function</text>
+  <text x="510" y="185" text-anchor="middle" font-size="14" fill="#713f12">Triggers Airflow DAG via API</text>
+  <text x="510" y="205" text-anchor="middle" font-size="14" fill="#713f12">Passes metadata and env vars</text>
+
+  <!-- STEP 3: Airflow Scheduler -->
+  <line x1="640" y1="190" x2="720" y2="190" stroke="#eab308" stroke-width="3" marker-end="url(#arrow-yellow)"/>
+  <rect x="720" y="120" width="260" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="850" y="160" text-anchor="middle" font-size="16" font-weight="600" fill="#166534">Airflow Scheduler</text>
+  <text x="850" y="185" text-anchor="middle" font-size="14" fill="#14532d">Optimized DAG Parsing</text>
+  <text x="850" y="205" text-anchor="middle" font-size="14" fill="#15803d">10× Faster Load</text>
+
+  <!-- STEP 4: Task Flow -->
+  <line x1="850" y1="260" x2="850" y2="320" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <rect x="620" y="320" width="460" height="120" rx="12" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="850" y="360" text-anchor="middle" font-size="16" font-weight="600" fill="#3f6212">Task Execution</text>
+  <text x="850" y="385" text-anchor="middle" font-size="14" fill="#4d7c0f">Parallelized and Async Task Execution</text>
+  <text x="850" y="405" text-anchor="middle" font-size="14" fill="#4d7c0f">Cached connections, 3 retries, SLA monitors</text>
+
+  <!-- STEP 5: File Processing -->
+  <line x1="620" y1="380" x2="400" y2="480" stroke="#65a30d" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="160" y="440" width="300" height="120" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="310" y="480" text-anchor="middle" font-size="16" font-weight="600" fill="#854d0e">File Processing</text>
+  <text x="310" y="505" text-anchor="middle" font-size="14" fill="#713f12">Chunked Uploads · Parallel I/O</text>
+  <text x="310" y="525" text-anchor="middle" font-size="14" fill="#713f12">10× Faster Transfer / Download</text>
+
+  <!-- STEP 6: BigQuery -->
+  <line x1="1080" y1="380" x2="1220" y2="480" stroke="#65a30d" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="1020" y="440" width="280" height="120" rx="12" fill="#e0e7ff" stroke="#3730a3" stroke-width="2"/>
+  <text x="1160" y="480" text-anchor="middle" font-size="16" font-weight="600" fill="#312e81">BigQuery</text>
+  <text x="1160" y="505" text-anchor="middle" font-size="14" fill="#3730a3">Temp Table Exports · Reduced Recompute</text>
+  <text x="1160" y="525" text-anchor="middle" font-size="14" fill="#3730a3">Optimized Query Costs</text>
+
+  <!-- STEP 7: Logging and Monitoring -->
+  <line x1="850" y1="440" x2="850" y2="550" stroke="#65a30d" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="580" y="550" width="540" height="120" rx="12" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="850" y="590" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Logging and Monitoring</text>
+  <text x="850" y="615" text-anchor="middle" font-size="14" fill="#0c4a6e">Stackdriver · Alerts · Error Tracking</text>
+  <text x="850" y="635" text-anchor="middle" font-size="14" fill="#0c4a6e">Improved Observability</text>
+
+  <!-- STEP 8: Data Storage -->
+  <line x1="850" y1="670" x2="850" y2="740" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="650" y="740" width="400" height="100" rx="12" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="850" y="775" text-anchor="middle" font-size="16" font-weight="600" fill="#3f6212">Result Storage and Notifications</text>
+  <text x="850" y="800" text-anchor="middle" font-size="14" fill="#4d7c0f">BigQuery / GCS Write + Slack or Webhook Notify</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#eab308"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#65a30d"/>
+    </marker>
+  </defs>
+
+  <!-- Performance Annotation -->
+  <text x="850" y="95" text-anchor="middle" font-size="15" fill="#166534" font-weight="500">
+    p95 ↓ 90s → 15s · p50 less then 10s · 3 Retries · SLA Aware · 10× File I/O Speedup
+  </text>
+
+</svg>

@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1400 850" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <!-- Background -->
+  <rect width="1400" height="850" fill="#f8fafc" rx="20"/>
+
+  <!-- Title -->
+  <text x="700" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    API Authentication Caching Optimization Flow
+  </text>
+
+  <!-- Step 1: Client Request -->
+  <rect x="100" y="130" width="220" height="100" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="210" y="165" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Client / Workflow</text>
+  <text x="210" y="190" text-anchor="middle" font-size="14" fill="#0369a1">Sends API Request</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="180" x2="380" y2="180" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+
+  <!-- Step 2: Apigee Layer -->
+  <rect x="380" y="110" width="240" height="140" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="500" y="150" text-anchor="middle" font-size="16" font-weight="600" fill="#854d0e">Apigee Gateway</text>
+  <text x="500" y="175" text-anchor="middle" font-size="14" fill="#713f12">Validates client credentials</text>
+  <text x="500" y="195" text-anchor="middle" font-size="14" fill="#713f12">Enforces rate limits and routing</text>
+
+  <!-- Arrow -->
+  <line x1="620" y1="180" x2="700" y2="180" stroke="#eab308" stroke-width="3" marker-end="url(#arrow-yellow)"/>
+
+  <!-- Step 3: Auth Interceptor Layer -->
+  <rect x="700" y="110" width="260" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="830" y="150" text-anchor="middle" font-size="16" font-weight="600" fill="#166534">Auth Interceptor</text>
+  <text x="830" y="175" text-anchor="middle" font-size="14" fill="#14532d">Checks local token cache</text>
+  <text x="830" y="195" text-anchor="middle" font-size="14" fill="#15803d">If valid → attaches token</text>
+
+  <!-- Arrow (Cache Hit Flow) -->
+  <line x1="830" y1="250" x2="830" y2="320" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <rect x="650" y="320" width="360" height="120" rx="12" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="830" y="360" text-anchor="middle" font-size="16" font-weight="600" fill="#3f6212">Cache Hit Path</text>
+  <text x="830" y="385" text-anchor="middle" font-size="14" fill="#4d7c0f">Use cached token (valid TTL)</text>
+  <text x="830" y="405" text-anchor="middle" font-size="14" fill="#4d7c0f">No network call — ultra low latency</text>
+
+  <!-- Arrow (Cache Miss Flow) -->
+  <line x1="960" y1="180" x2="1080" y2="180" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <!-- Step 4: Token Refresh -->
+  <rect x="1080" y="110" width="260" height="140" rx="12" fill="#e0e7ff" stroke="#3730a3" stroke-width="2"/>
+  <text x="1210" y="150" text-anchor="middle" font-size="16" font-weight="600" fill="#312e81">Single-Flight Token Refresh</text>
+  <text x="1210" y="175" text-anchor="middle" font-size="14" fill="#3730a3">Locks concurrent refreshes</text>
+  <text x="1210" y="195" text-anchor="middle" font-size="14" fill="#3730a3">Caches new token + expiry</text>
+
+  <!-- Step 5: Cache Update -->
+  <line x1="1210" y1="250" x2="1210" y2="320" stroke="#3730a3" stroke-width="3" marker-end="url(#arrow-purple)"/>
+  <rect x="1040" y="320" width="340" height="120" rx="12" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+  <text x="1210" y="360" text-anchor="middle" font-size="16" font-weight="600" fill="#581c87">Cache Update</text>
+  <text x="1210" y="385" text-anchor="middle" font-size="14" fill="#6b21a8">Stores token securely</text>
+  <text x="1210" y="405" text-anchor="middle" font-size="14" fill="#6b21a8">Uses Secret Manager backend</text>
+
+  <!-- Step 6: Retry Logic -->
+  <line x1="830" y1="440" x2="830" y2="520" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="650" y="520" width="360" height="120" rx="12" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="830" y="560" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Retry and Concurrency Control</text>
+  <text x="830" y="585" text-anchor="middle" font-size="14" fill="#0c4a6e">Interceptor retries failed requests (max 3)</text>
+  <text x="830" y="605" text-anchor="middle" font-size="14" fill="#0c4a6e">Prevents duplicate refresh storm</text>
+
+  <!-- Step 7: Logging and Monitoring -->
+  <line x1="830" y1="640" x2="830" y2="710" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="570" y="710" width="520" height="100" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="830" y="745" text-anchor="middle" font-size="16" font-weight="600" fill="#166534">Logging and Monitoring</text>
+  <text x="830" y="770" text-anchor="middle" font-size="14" fill="#14532d">Cloud Logging · Token Metrics · Alert on failures</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#eab308"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#65a30d"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7e22ce"/>
+    </marker>
+  </defs>
+
+  <!-- Performance Banner -->
+  <rect x="420" y="70" width="560" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="700" y="95" text-anchor="middle" font-size="15" fill="#166534" font-weight="500">
+    Over 90% reduction in Token Refresh Calls
+  </text>
+
+</svg>

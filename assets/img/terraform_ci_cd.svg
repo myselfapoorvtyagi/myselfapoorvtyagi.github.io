@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8fafc" rx="20"/>
+
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    Terraform and GitHub Actions — Cloud Automation Pipeline
+  </text>
+
+  <!-- Developer Block -->
+  <rect x="60" y="140" width="200" height="100" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="160" y="180" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Developer Commit</text>
+  <text x="160" y="205" text-anchor="middle" font-size="14" fill="#0369a1">Git Push / Pull Request</text>
+
+  <!-- Arrow -->
+  <line x1="260" y1="190" x2="320" y2="190" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow-blue)"/>
+
+  <!-- GitHub Actions Block -->
+  <rect x="320" y="120" width="220" height="140" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="160" text-anchor="middle" font-size="16" font-weight="600" fill="#5b21b6">GitHub Actions CI/CD</text>
+  <text x="430" y="185" text-anchor="middle" font-size="14" fill="#6d28d9">Build · Lint · Test · Deploy</text>
+  <text x="430" y="210" text-anchor="middle" font-size="14" fill="#7e22ce">Reusable Workflows / Matrix</text>
+
+  <line x1="540" y1="190" x2="600" y2="190" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow-purple)"/>
+
+  <!-- Terraform Block -->
+  <rect x="600" y="120" width="230" height="140" rx="12" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="715" y="160" text-anchor="middle" font-size="16" font-weight="600" fill="#3f6212">Terraform Infrastructure</text>
+  <text x="715" y="185" text-anchor="middle" font-size="14" fill="#4d7c0f">Plan → Validate → Apply</text>
+  <text x="715" y="210" text-anchor="middle" font-size="14" fill="#4d7c0f">Modular IaC · Remote State</text>
+
+  <line x1="830" y1="190" x2="900" y2="190" stroke="#65a30d" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <!-- Cloud Resources Block -->
+  <rect x="900" y="120" width="230" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="1015" y="160" text-anchor="middle" font-size="16" font-weight="600" fill="#166534">Cloud Resources (GCP/AWS)</text>
+  <text x="1015" y="185" text-anchor="middle" font-size="14" fill="#14532d">Composer · BQ · VPC · IAM</text>
+  <text x="1015" y="210" text-anchor="middle" font-size="14" fill="#15803d">Auto-Provisioned via IaC</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="300" x2="1140" y2="300" stroke="#94a3b8" stroke-dasharray="6,6"/>
+
+  <!-- Secrets and Security -->
+  <rect x="200" y="340" width="280" height="100" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="340" y="375" text-anchor="middle" font-size="16" font-weight="600" fill="#854d0e">Secrets and Security Layer</text>
+  <text x="340" y="400" text-anchor="middle" font-size="14" fill="#713f12">Google Secret Manager · Encrypted Vars</text>
+
+  <line x1="480" y1="390" x2="520" y2="390" stroke="#eab308" stroke-width="3" marker-end="url(#arrow-yellow)"/>
+
+  <!-- Retry and Resilience -->
+  <rect x="520" y="340" width="280" height="100" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="660" y="375" text-anchor="middle" font-size="16" font-weight="600" fill="#991b1b">Resilience and Retries</text>
+  <text x="660" y="400" text-anchor="middle" font-size="14" fill="#b91c1c">3 Retries · Rollback Plan · State Locking</text>
+
+  <line x1="800" y1="390" x2="850" y2="390" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red)"/>
+
+  <!-- Logging and Monitoring -->
+  <rect x="850" y="340" width="280" height="100" rx="12" fill="#f0f9ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="990" y="375" text-anchor="middle" font-size="16" font-weight="600" fill="#075985">Logging and Monitoring</text>
+  <text x="990" y="400" text-anchor="middle" font-size="14" fill="#0c4a6e">Cloud Logging · Falco · Alert Policies</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="500" x2="1140" y2="500" stroke="#94a3b8" stroke-dasharray="6,6"/>
+
+  <!-- Feedback Loop -->
+  <rect x="200" y="540" width="800" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="600" y="575" text-anchor="middle" font-size="16" font-weight="600" fill="#5b21b6">Continuous Feedback Loop</text>
+  <text x="600" y="600" text-anchor="middle" font-size="14" fill="#6d28d9">GitHub Checks → Terraform Validation → Cloud Observability</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#65a30d"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#eab308"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+</svg>
