@@ -4,7 +4,7 @@
       <path d="M0,0 L0,6 L9,3 z" fill="#334155" />
     </marker>
   </defs>
-
+  <rect width="1400" height="850" fill="#f8fafc" rx="20"/>
   <text x="40" y="36" font-size="20" font-weight="600" fill="#0f172a">AWS Redshift OLAP: Modeling for Fast Reports</text>
   <text x="40" y="56" font-size="13" fill="#475569">Distribution keys, sort keys, and materialized aggregates</text>
 
