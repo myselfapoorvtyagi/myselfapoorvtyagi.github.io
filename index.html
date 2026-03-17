@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apoorv Tyagi — Cloud Data Engineer</title>
+  <title>Apoorv Tyagi - Data Engineer</title>
   <meta name="description"
-    content="Cloud Data Engineer: GCP, AWS, Azure, BigQuery, Airflow, Dataflow, Python, SQL, Docker." />
+    content="Data Engineer: GCP, AWS, Python, SQL, Airflow, AI" />
   <meta name="theme-color" content="#0f172a" />
   <meta property="og:title" content="Apoorv Tyagi — Cloud Data Engineer" />
   <meta property="og:description"
-    content="7 years building scalable data platforms, pipelines, and analytics on cloud and on-prem." />
+    content="7+ years of building scalable data platforms, pipelines, and analytics on cloud and on-prem." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,9 +44,9 @@
       <div>
         <p class="live-badge" aria-live="polite"><span class="pulse"></span> Open to opportunities · Replies within 24h
         </p>
-        <h1><span class="gradient">Cloud AI Data Engineer</span></h1>
-        <h2>Python · SQL · GCP · ETL · Airflow</h2>
-        <p class="subtitle">7 years designing scalable data platforms, pipelines, and analytics across cloud and
+        <h1><span class="gradient">Data Engineer</span></h1>
+        <h2>Python · SQL · GCP · AWS · ETL · Airflow</h2>
+        <p class="subtitle">7+ years of designing scalable data platforms, pipelines, and analytics across clouds and
           on-prem.</p>
         <div class="cta"> 
           <a class="btn" href="assets/Apoorv_Tyagi_Resume.pdf" target="_blank" rel="noreferrer">Resume ⤓</a>
@@ -55,7 +55,7 @@
           <a class="btn secondary" href="#experience">Exp →</a>
         </div>
           <div class="kpi">
-            <div class="card"><strong>7 years</strong><br />Experience</div>
+            <div class="card"><strong>7+ years</strong><br />Experience</div>
             <div class="card"><strong>Multi-cloud</strong><br />GCP · AWS · Azure</div>
             <div class="card"><strong>99.9%</strong><br />Pipeline SLA</div>
           </div>
@@ -128,7 +128,203 @@
       </div>
     </section>
 
-    <!-- 3. Projects (minimal) -->
+    <!-- 3. Work Experience (with single company image) -->
+    <section id="experience" class="experience reveal">
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+        <article class="card exp-card">
+          <div class="exp-header">
+            <h3>Cloud Data Engineer — Deutsche Bank</h3>
+            <p class="muted"><em>2024 – Present · India</em></p>
+          </div>
+          <div class="exp-body">
+            <picture class="exp-image">
+              <img src="assets/img/exp-deutsche.jpg" alt="Deutsche Bank data platform dashboards and Composer DAGs"
+                loading="lazy" />
+            </picture>
+            <ul class="exp-points">
+              <li>Optimized composer (Airflow file processing), 10 times faster file transfer with higher reliability under variable networks.</li>
+              <li>Optimized API authentication by caching access tokens with expiry, implementing single-flight refresh and interceptor-based retries, eliminating
+              redundant refreshes and stabilizing concurrency while reducing auth calls by 90%.</li>
+              <li>Faster, cheaper BigQuery-to-file exports by exploiting default temp tables and minimizing recompute.</li>
+              <li>Optimized webhook pipeline, p95 reduced from 90 seconds to 15 seconds, p50 under 10 seconds, with resilient async design.</li>
+              <li>Supported AI agent development using cloud run, gemini and google adk.</li>
+              <li>Created physical and logical data models using SAP PowerDesigner.</li>
+              <li>Managed real-time and batch ETL data pipelines, ensuring efficient data handling and real-time insights.</li>
+              <li>Orchestrated complex workflows with airflow & optimized end-to-end data processing.</li>
+              <li>Optimized SQL queries and Python scripts for efficient operations e.g., data retrieval and ingestion with large data in bigquery and GCS.</li>
+              <li>Spearheaded the implementation of terraform and github actions for robust management of airflow DAG, GCS, GSM and Cloud functions.</li>
+              <li>Conducted multiple POCs for ETL/ELT processes across on-premise and GCP environments.</li>
+              <li>Migrated legacy data workflows from on-prem to GCP, reducing infrastructure maintenance overhead and achieving up to 40% cost savings.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">Airflow
+                (Composer)</span><span class="chip">Dataflow</span><span class="chip">Cloud Functions</span><span
+                class="chip">Python</span><span class="chip">SQL</span><span class="chip">Terraform</span><span
+                class="chip">GitHub Actions</span><span class="chip">Docker</span>
+            </div>
+
+            <!-- Add this part inside the same <article> block -->
+            <div class="impact-section" style="margin-top: 30px;">
+              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
+
+              <div class="grid grid-2 gap-6">
+                <!-- Webhook Pipeline Optimization -->
+                <div class="card">
+                  <h5>⚡ Async Webhook Pipeline</h5>
+                  <p>
+                    Reduced <strong>p95 latency from ~90s to 15s</strong> via async Cloud Function design, parallelized
+                    API calls,
+                    and BigQuery integration with resilient error handling.
+                  </p>
+                  <img src="assets/img/cf_op.svg" alt="Webhook Pipeline Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+                <!-- Airflow Composer Optimization -->
+                <div class="card">
+                  <h5>Airflow Composer Optimization</h5>
+                  <p>
+                    Achieved <strong>10× faster</strong> file transfer and download performance by parallelizing Airflow
+                    Composer's
+                    file handling and enabling resumable uploads for unstable networks.
+                  </p>
+                  <img src="assets/img/airflow_optimization.svg" alt="Airflow Optimization Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+                <!-- API Authentication Caching -->
+                <div class="card">
+                  <h5>API Authentication Caching</h5>
+                  <p>
+                    Reduced authentication calls by <strong>90%</strong> using token caching, single-flight refresh
+                    logic, and interceptor-based retries.
+                    Stabilized concurrent requests and improved pipeline throughput.
+                  </p>
+                  <img src="assets/img/api_auth_cache.svg" alt="API Authentication Caching Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+                <!-- Terraform + GitHub Actions Automation -->
+                <div class="card">
+                  <h5>Terraform & GitHub Actions</h5>
+                  <p>
+                    Automated deployments for Airflow DAGs, Cloud Functions, GCS, and GSM resources via Terraform and
+                    GitHub Actions CI/CD pipelines.
+                    Improved release reliability and reduced manual ops time.
+                  </p>
+                  <img src="assets/img/terraform_ci_cd.svg" alt="Terraform GitHub Actions Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card exp-card">
+          <div class="exp-header">
+            <h3>Data Engineer — Infosys</h3>
+            <p class="muted"><em>2022 – 2024 · India</em></p>
+          </div>
+          <div class="exp-body">
+            <picture class="exp-image">
+              <img src="assets/img/exp-infosys.jpg" alt="Infosys telecom data pipelines with Mage and GCP services"
+                loading="lazy" />
+            </picture>
+            <ul class="exp-points">
+              <li>Engineered ETL/ELT processes using AWS Glue and Lambda functions ensuring 99.9% data quality and actionable insights.</li>
+              <li>Designed and optimized schemas for efficient storage and retrieval in Amazon Redshift, RDS, and S3.</li>
+              <li>Orchestrated complex workflows using Managed Workflows for Apache Airflow with S3 data lakes.</li>
+              <li>Built serverless data transformations with Lambda and S3 events, reducing latency by 70%.</li>
+              <li>Implemented scalable batch pipelines integrating Glue ETL jobs with Redshift for analytics workloads.</li>
+              <li>Devised star schema data models using DBT for streamlined data processing.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">GCP</span><span class="chip">Dataflow</span><span class="chip">Cloud
+                Functions</span><span class="chip">Pub/Sub</span><span class="chip">GCS</span><span
+                class="chip">Composer</span><span class="chip">Python</span><span class="chip">Pandas</span><span
+                class="chip">Docker</span>
+            </div>
+            <div class="impact-section" style="margin-top: 30px;">
+              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
+              <div class="grid grid-2 gap-6">
+                <div class="card">
+                  <h5>Schema Design & Data Modeling</h5>
+                  <p>
+                    Created optimized schemas and star models using Lucidchart;
+                    reduced BigQuery query cost by <strong>30%</strong> through partitioning and clustering.
+                  </p>
+                  <img src="assets/img/schema_design.svg" alt="Schema Design Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+
+                <div class="card">
+                  <h5>Falco & Cloud Monitoring</h5>
+                  <p>
+                    Integrated Falco and Cloud Monitoring for proactive alerts and container health checks,
+                    reducing failure detection time from hours to minutes.
+                  </p>
+                  <img src="assets/img/monitoring_falco.svg" alt="Falco Monitoring Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card exp-card">
+          <div class="exp-header">
+            <h3>Software Engineer — Tata Consultancy Services</h3>
+            <p class="muted"><em>2019 – 2022 · India</em></p>
+          </div>
+          <div class="exp-body">
+            <picture class="exp-image">
+              <img src="assets/img/exp-tcs.jpg" alt="Azure Data Factory, Databricks, and AWS Redshift workloads"
+                loading="lazy" />
+            </picture>
+            <ul class="exp-points">
+              <li>Developed scalable data processing pipelines using dataflow and apache beam, ensuring seamless integration with data warehouse.</li>
+              <li>Built OLAP systems leveraging bigquery and optimized data models for analytical workloads for healthcare clients.</li>
+              <li>Automated daily device registration and reporting reducing manual intervention by 60% and significantly improving processing speed.</li>
+              <li>Mentored a team of 5–6 engineers offering technical guidance on python programming.</li>
+              <li>Designed cloud storage-based hierarchical storage architecture with lifecycle policies, enabling efficient data retrieval.</li>
+              <li>Developed Python-based backend components handling API calls and interaction with csv files.</li>
+              <li>Additionally worked on a POC with Kinesis and Pub Sub on interoperable solutions.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Azure</span><span class="chip">Data Factory</span><span
+                class="chip">Databricks</span><span class="chip">AWS</span><span class="chip">Redshift</span><span
+                class="chip">Lambda</span><span class="chip">S3</span><span class="chip">Glue</span><span
+                class="chip">Docker</span>
+            </div>
+            <div class="impact-section" style="margin-top: 30px;">
+              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
+              <div class="grid grid-2 gap-6">
+                <div class="card">
+                  <h5>AWS Redshift OLAP Models</h5>
+                  <p>
+                    Designed OLAP models on Redshift to improve reporting latency from 2 hours to <strong>15
+                      minutes</strong>.
+                  </p>
+                  <img src="assets/img/redshift_olap.svg" alt="AWS Redshift OLAP Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+                <div class="card">
+                  <h5>Pub/Sub Integration</h5>
+                  <p>
+                    Built reliable Pub/Sub ingestion for near real-time telecom data streams
+                    with retry queues and exponential backoff.
+                  </p>
+                  <img src="assets/img/pubsub_integration.svg" alt="Pub/Sub Integration Diagram" loading="lazy"
+                    style="margin-top:10px; border-radius:10px;">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <!-- 4. Projects (minimal) -->
     <section id="projects" class="projects reveal">
       <h2>Projects</h2>
       <p class="muted">Selected work samples.</p>
@@ -261,206 +457,6 @@
       </div>
     </section>
 
-    <!-- 4. Work Experience (with single company image) -->
-    <section id="experience" class="experience reveal">
-      <h2>Work Experience</h2>
-
-      <div class="timeline">
-        <article class="card exp-card">
-          <div class="exp-header">
-            <h3>Cloud Data Engineer — Deutsche Bank</h3>
-            <p class="muted"><em>2024 – Present · India</em></p>
-          </div>
-          <div class="exp-body">
-            <picture class="exp-image">
-              <img src="assets/img/exp-deutsche.jpg" alt="Deutsche Bank data platform dashboards and Composer DAGs"
-                loading="lazy" />
-            </picture>
-            <ul class="exp-points">
-              <li>Optimized cloud composer, 10x faster file transfer/downloads with higher reliability under variable
-                networks.</li>
-              <li>Optimized API authentication by caching access tokens with expiry, implementing single-flight refresh
-                and interceptor-based retries, eliminating
-                redundant refreshes and stabilizing concurrency while reducing auth calls by >90%.</li>
-              <li>Faster, cheaper BigQuery-to-file exports by exploiting default temp tables and minimizing recompute.
-              </li>
-              <li>Optimized webhook pipeline, p95 reduced from ~90 seconds to ~15 seconds, p50 under 10 seconds, with
-                resilient async design.</li>
-              <li>Architected scalable and resilient data pipelines leveraging GCP services.</li>
-              <li>Managed real-time and batch pipelines for efficient handling and near real-time insights.</li>
-              <li>Orchestrated complex workflows with Airflow; optimized end-to-end processing.</li>
-              <li>Automated ETL with Python (pandas, paramiko, PGP, requests), reducing manual effort.</li>
-              <li>Optimized SQL for large datasets in BigQuery.</li>
-              <li>Implemented Terraform and GitHub Actions for robust Composer DAG management.</li>
-              <li>Ran POCs for ETL/ELT across on-prem and GCP.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">Airflow
-                (Composer)</span><span class="chip">Dataflow</span><span class="chip">Cloud Functions</span><span
-                class="chip">Python</span><span class="chip">SQL</span><span class="chip">Terraform</span><span
-                class="chip">GitHub Actions</span><span class="chip">Docker</span>
-            </div>
-
-            <!-- Add this part inside the same <article> block -->
-            <div class="impact-section" style="margin-top: 30px;">
-              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
-
-              <div class="grid grid-2 gap-6">
-                <!-- Webhook Pipeline Optimization -->
-                <div class="card">
-                  <h5>⚡ Async Webhook Pipeline</h5>
-                  <p>
-                    Reduced <strong>p95 latency from ~90s to 15s</strong> via async Cloud Function design, parallelized
-                    API calls,
-                    and BigQuery integration with resilient error handling.
-                  </p>
-                  <img src="assets/img/cf_op.svg" alt="Webhook Pipeline Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-                <!-- Airflow Composer Optimization -->
-                <div class="card">
-                  <h5>Airflow Composer Optimization</h5>
-                  <p>
-                    Achieved <strong>10× faster</strong> file transfer and download performance by parallelizing Airflow
-                    Composer's
-                    file handling and enabling resumable uploads for unstable networks.
-                  </p>
-                  <img src="assets/img/airflow_optimization.svg" alt="Airflow Optimization Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-                <!-- API Authentication Caching -->
-                <div class="card">
-                  <h5>API Authentication Caching</h5>
-                  <p>
-                    Reduced authentication calls by <strong>90%</strong> using token caching, single-flight refresh
-                    logic, and interceptor-based retries.
-                    Stabilized concurrent requests and improved pipeline throughput.
-                  </p>
-                  <img src="assets/img/api_auth_cache.svg" alt="API Authentication Caching Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-                <!-- Terraform + GitHub Actions Automation -->
-                <div class="card">
-                  <h5>Terraform & GitHub Actions</h5>
-                  <p>
-                    Automated deployments for Airflow DAGs, Cloud Functions, GCS, and GSM resources via Terraform and
-                    GitHub Actions CI/CD pipelines.
-                    Improved release reliability and reduced manual ops time.
-                  </p>
-                  <img src="assets/img/terraform_ci_cd.svg" alt="Terraform GitHub Actions Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card exp-card">
-          <div class="exp-header">
-            <h3>Data Engineer — Infosys</h3>
-            <p class="muted"><em>2022 – 2024 · India</em></p>
-          </div>
-          <div class="exp-body">
-            <picture class="exp-image">
-              <img src="assets/img/exp-infosys.jpg" alt="Infosys telecom data pipelines with Mage and GCP services"
-                loading="lazy" />
-            </picture>
-            <ul class="exp-points">
-              <li>Delivered end-to-end batch pipelines on GCP using Mage, Python, Pandas.</li>
-              <li>Built ETL/ELT with Dataflow and Cloud Functions; improved data quality and insights.</li>
-              <li>Designed and optimized schemas for efficient storage and retrieval.</li>
-              <li>Collaborated with stakeholders to meet business requirements.</li>
-              <li>Implemented Falco monitoring and Vagrant VMs with Cloud Monitoring & Logging.</li>
-              <li>Designed star schema data models with Lucidchart.</li>
-              <li>Enhanced reliability using Pub/Sub, GCS, and Composer.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">GCP</span><span class="chip">Dataflow</span><span class="chip">Cloud
-                Functions</span><span class="chip">Pub/Sub</span><span class="chip">GCS</span><span
-                class="chip">Composer</span><span class="chip">Python</span><span class="chip">Pandas</span><span
-                class="chip">Docker</span>
-            </div>
-            <div class="impact-section" style="margin-top: 30px;">
-              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
-              <div class="grid grid-2 gap-6">
-                <div class="card">
-                  <h5>Schema Design & Data Modeling</h5>
-                  <p>
-                    Created optimized schemas and star models using Lucidchart;
-                    reduced BigQuery query cost by <strong>30%</strong> through partitioning and clustering.
-                  </p>
-                  <img src="assets/img/schema_design.svg" alt="Schema Design Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-
-                <div class="card">
-                  <h5>Falco & Cloud Monitoring</h5>
-                  <p>
-                    Integrated Falco and Cloud Monitoring for proactive alerts and container health checks,
-                    reducing failure detection time from hours to minutes.
-                  </p>
-                  <img src="assets/img/monitoring_falco.svg" alt="Falco Monitoring Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card exp-card">
-          <div class="exp-header">
-            <h3>Software Developer — Tata Consultancy Services</h3>
-            <p class="muted"><em>2019 – 2022 · India</em></p>
-          </div>
-          <div class="exp-body">
-            <picture class="exp-image">
-              <img src="assets/img/exp-tcs.jpg" alt="Azure Data Factory, Databricks, and AWS Redshift workloads"
-                loading="lazy" />
-            </picture>
-            <ul class="exp-points">
-              <li>Built pipelines using Azure Data Factory and Azure Databricks.</li>
-              <li>Developed OLAP batch processing with AWS Redshift for healthcare analytics.</li>
-              <li>Automated device registration reporting using AWS Lambda.</li>
-              <li>Led a 5–6 engineer team on cloud data solutions.</li>
-              <li>Designed S3-based storage for performance and cost optimization.</li>
-              <li>Developed Python backends integrated with AWS Glue for scalable ETL.</li>
-              <li>Improved CI/CD with automation scripts.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">Azure</span><span class="chip">Data Factory</span><span
-                class="chip">Databricks</span><span class="chip">AWS</span><span class="chip">Redshift</span><span
-                class="chip">Lambda</span><span class="chip">S3</span><span class="chip">Glue</span><span
-                class="chip">Docker</span>
-            </div>
-            <div class="impact-section" style="margin-top: 30px;">
-              <h4 class="text-lg font-semibold mb-3">Key Technical Impact</h4>
-              <div class="grid grid-2 gap-6">
-                <div class="card">
-                  <h5>AWS Redshift OLAP Models</h5>
-                  <p>
-                    Designed OLAP models on Redshift to improve reporting latency from 2 hours to <strong>15
-                      minutes</strong>.
-                  </p>
-                  <img src="assets/img/redshift_olap.svg" alt="AWS Redshift OLAP Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-                <div class="card">
-                  <h5>Pub/Sub Integration</h5>
-                  <p>
-                    Built reliable Pub/Sub ingestion for near real-time telecom data streams
-                    with retry queues and exponential backoff.
-                  </p>
-                  <img src="assets/img/pubsub_integration.svg" alt="Pub/Sub Integration Diagram" loading="lazy"
-                    style="margin-top:10px; border-radius:10px;">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </div>
-    </section>
-
     <!-- 5. Skills -->
     <section id="skills" class="reveal">
       <h2>Skills</h2>
@@ -477,6 +473,14 @@
             <span class="chip">BigQuery</span><span class="chip">Composer (Airflow)</span><span class="chip">Cloud
               Storage</span><span class="chip">Dataflow</span><span class="chip">Pub/Sub</span><span
               class="chip">Compute Engine</span><span class="chip">Cloud Functions</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Amazon Web Services</h3>
+          <div class="chips">
+            <span class="chip">Redshift</span><span class="chip">AWS Glue</span><span class="chip">S3</span>
+            <span class="chip">Managed Workflows</span><span class="chip">Kinesis</span><span
+              class="chip">Lambda</span><span class="chip">Amazon RDS</span>
           </div>
         </article>
         <article class="card">
